@@ -1,4 +1,5 @@
 import express from 'express';
+import { DEV, PROD, ACTIVE } from '../constants';
 import { firestoreGetAll } from '../utils/firestore';
 
 const app = express();
@@ -11,12 +12,9 @@ const magic = async () => {
   console.log(db);
 };
 
-const isDev = process.env.NODE_ENV === 'development';
-const isProd = process.env.NODE_ENV === 'production';
-const isActive = process.env.ACTIVE;
-if (isDev) {
+if (DEV) {
   magic();
-} else if (isProd && isActive) {
+} else if (PROD && ACTIVE) {
   magic();
 }
 
