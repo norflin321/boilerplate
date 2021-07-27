@@ -4,7 +4,9 @@
   "description": "",
   "private": true,
   "scripts": {
-    "main": "node ./esbuild.js main && node ./dist/main/out.js"
+    "start": "node ./out.js",
+    "dev-main": "node ./esbuild.js main && NODE_ENV=development node ./dist/main/out.js",
+    "deploy-main": "cp ./package.json ./dist/main && node ./esbuild.js main && cd ./dist/main && git add . && git commit -m 'make better' && git push && cd ../.."
   },
   "devDependencies": {
     "@types/express": "^4.17.13",

@@ -6,6 +6,5 @@ require('esbuild').build({
   platform: 'node',
   target: 'es2020',
   outfile: `dist/${process.argv[2]}/out.js`,
-  define: { 'process.env.NODE_ENV': '"development"' },
   plugins: [nodeExternalsPlugin()],
 });
