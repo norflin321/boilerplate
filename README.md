@@ -1,1 +1,1 @@
-typescript, eslint, express, firebase
+setup for: typescript, esbuild, express, firebase, rp, heroku deploy
