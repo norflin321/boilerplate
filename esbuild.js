@@ -1,7 +1,7 @@
 const { nodeExternalsPlugin } = require('esbuild-node-externals');
 
 require('esbuild').build({
-  entryPoints: [`src/features/${process.argv[2]}/index.ts`],
+  entryPoints: [`src/jobs/${process.argv[2]}/index.ts`],
   bundle: true,
   platform: 'node',
   target: 'es2020',
