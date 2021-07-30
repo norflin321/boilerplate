@@ -1,13 +1,6 @@
 import firebase from 'firebase';
+import { firebaseConfig } from '@/constants';
 
-// const firebaseConfig = {
-// apiKey: '',
-// authDomain: '',
-// projectId: '',
-// storageBucket: '',
-// messagingSenderId: '',
-// appId: '',
-// };
 firebase.initializeApp(firebaseConfig);
 const firestore = firebase.firestore().collection('db').doc('db');
 
