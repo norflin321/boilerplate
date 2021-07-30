@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "node ./out.js",
-    "dev-main": "node ./esbuild.js main && NODE_ENV=development node ./dist/main/out.js",
+    "dev-main": "node ./esbuild.js main && NODE_ENV=development node --enable-source-maps --trace-warnings ./dist/main/out.js",
     "deploy-main": "cp ./package.json ./dist/main && node ./esbuild.js main && cd ./dist/main && git add . && git commit -m 'make better' && git push && cd ../.."
   },
   "devDependencies": {

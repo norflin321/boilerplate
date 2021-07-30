@@ -5,3 +5,4 @@
 # TODO
 
 - [x] replace request-promise with axios
+- [x] add sourcemaps
